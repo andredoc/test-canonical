@@ -13,7 +13,7 @@ const CardComponent = ({ todo }) => {
                     <h5>Cloud and Server</h5>
                     <hr className="dotted-line" />
                     <a href={todo.link}>
-                        <img className="p-card__image" alt="image-center" src={todo.featured_media} />
+                        <img className="p-card__image" alt="" src={todo.featured_media} />
                     </a>
                     <div className="card-title">
                         <a className="title" href={todo.link}>{todo.title.rendered}</a>
