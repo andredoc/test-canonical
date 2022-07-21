@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import CardComponent from './components/CardComponent';
 
 function App() {
+
+const url='https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json'
+const [todos, setTodos] = useState()
+
+const fetchApi = async () => {
+  const response = await (await fetch(url)).json()
+  setTodos(response)
+}
+
+useEffect(()=>{
+  fetchApi()
+}, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='row'>
+        { 
+          !todos ? 'Cargando...' : 
+          todos.map((todo,index) => (
+            <CardComponent key={index} todo={todo}/>)
+          )
+        }
+      </div>     
     </div>
   );
 }
