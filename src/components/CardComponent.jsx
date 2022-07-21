@@ -1,19 +1,19 @@
 import "./CardComponent.css"
 
-const CardComponent = ({todo})=>{
+const CardComponent = ({ todo }) => {
 
-    const formatDate = (date) =>{
+    const formatDate = (date) => {
         return new Date(date).toLocaleDateString('en-UK', { year: 'numeric', month: 'long', day: 'numeric' })
     }
 
     return (
-        <div className="col-4">
+        <div className="col-small-12 col-medium-6 col-4">
             <div className="p-card u-no-padding card-styles">
                 <div className="p-card__inner">
                     <h5>Cloud and Server</h5>
                     <hr className="dotted-line" />
                     <a href={todo.link}>
-                        <img className="p-card__image" src={todo.featured_media} />
+                        <img className="p-card__image" alt="image-center" src={todo.featured_media} />
                     </a>
                     <div className="card-title">
                         <a className="title" href={todo.link}>{todo.title.rendered}</a>
@@ -25,7 +25,7 @@ const CardComponent = ({todo})=>{
                     </div>
                 </div>
                 <div className="p-card__inner">
-                    <hr className="dotted-line u-no-margin--bottom"/>
+                    <hr className="dotted-line u-no-margin--bottom" />
                     <p>Article</p>
                 </div>
             </div>
