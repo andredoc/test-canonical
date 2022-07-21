@@ -16,12 +16,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-BLOG CARDS DESIGNS
+## BLOG CARDS DESIGNS
 
 Using Canonical API and links to Canonical Blogs:
 
 ![Alt text](/src/assets/images/screen-images/design_cards_screen.png)
 
-BLOG CARDS DESIGNS - RESPONSIVE
+## BLOG CARDS DESIGNS - RESPONSIVE
 
 ![Alt text](/src/assets/images/screen-images/design_cards_responsive.png)
